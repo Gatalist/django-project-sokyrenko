@@ -1,0 +1,394 @@
+
+{% extends 'sculptures/base.html' %}
+
+{% block title %} О нас {% endblock title %}
+
+{% block keywords %} Оригинальные, необычные вещи, подарки и сувениры для всех, начальнику, шефу, мужу, жене, руководителю, для него, для неё  {% endblock keywords %}
+
+{% block description %} О нас > sokyrenko Presents > онлайн-магазин подарков от Сокуренко Д №➊ в Украине! Мы поможем найти эксклюзивные подарки для самых дорогих Вам людей!{% endblock description %}
+
+
+{% load static %}
+
+{% block content %}
+
+    <section class="mbr-section article content9 cid-rUK9H5D4ET" id="content9-2e">
+        <div class="container">
+            <div class="inner-container" style="width: 100%;">
+                <div class="section-text align-center mbr-fonts-style display-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section article content9 cid-rUK9H5D4ET" id="content9-2e">
+        <div class="container">
+            <div class="inner-container" style="width: 100%;">
+                <hr class="line" style="width: 25%;">
+                <div class="section-text align-center mbr-fonts-style display-2">
+                    Автор
+                </div>
+                <hr class="line" style="width: 25%;">
+            </div>
+        </div>
+    </section>
+
+    {% for author in author_list %}
+
+        <section class="testimonials3 cid-rUI5QT5out" id="testimonials3-l">
+            <div class="container">
+                <div class="media-container-row">
+                    <div class="media-content px-3 align-self-center mbr-white py-2">
+                        <p class="mbr-author-name pt-4 mb-2 mbr-fonts-style display-7">
+                           {{author.name}}
+                        </p>
+                        <p class="mbr-author-desc mbr-fonts-style display-7">
+                           Скульптор
+                        </p>
+                        <p class="mbr-text testimonial-text mbr-fonts-style display-7">
+                           {{author.description}}
+                        </p>
+                    </div>
+
+                    <div class="mbr-figure pl-lg-5" style="width: 65%;">
+                      <img src="{{author.image.url}}" alt="" title="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {% endfor %}
+
+    <section class="timeline1 cid-rUK4yn2eXY" id="timeline1-29">
+        <div class="container align-center">
+            <h2 class="mbr-section-title pb-3 mbr-fonts-style display-2">
+                Таймлайн
+            </h2>
+            <h3 class="mbr-section-subtitle pb-5 mbr-fonts-style display-5">
+                Создание моих работ
+            </h3>
+
+            <div class="container timelines-container">
+                <!--1-->
+                <div class="row timeline-element reverse separline">
+                     <div class="timeline-date-panel col-xs-12 col-md-6  align-left">
+                        <div class="time-line-date-content">
+                            <p class="mbr-timeline-date mbr-fonts-style display-5" style="color: #0d95e8">
+                                24 Мая 2019
+                            </p>
+                        </div>
+                    </div>
+                    <span class="iconBackground"></span>
+                    <div class="col-xs-12 col-md-6 align-right">
+                        <div class="timeline-text-content">
+                            <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">
+                                Волк
+                            </h4>
+                            <p class="mbr-timeline-text mbr-fonts-style display-7">
+                                Создана скульптура
+                            </p>
+                         </div>
+                    </div>
+                </div>
+                <!--2-->
+                <div class="row timeline-element  separline">
+                    <div class="timeline-date-panel col-xs-12 col-md-6 align-right">
+                        <div class="time-line-date-content">
+                            <p class="mbr-timeline-date mbr-fonts-style display-5" style="color: #0d95e8">
+                                1 Июля 2018
+                            </p>
+                        </div>
+                    </div>
+                    <span class="iconBackground"></span>
+                    <div class="col-xs-12 col-md-6 align-left ">
+                        <div class="timeline-text-content">
+                            <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">
+                                Портал для камина
+                            </h4>
+                            <p class="mbr-timeline-text mbr-fonts-style display-7">
+                                Создан портал для камина
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--3-->
+                <div class="row timeline-element reverse">
+                    <div class="timeline-date-panel col-xs-12 col-md-6  align-left">
+                        <div class="time-line-date-content">
+                            <p class="mbr-timeline-date mbr-fonts-style display-5" style="color: #0d95e8">
+                                3 Января 2016
+                            </p>
+                        </div>
+                    </div>
+                    <span class="iconBackground"></span>
+                    <div class="col-xs-12 col-md-6 align-right">
+                        <div class="timeline-text-content">
+                            <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">
+                                Шимпанзе думающая о любви
+                            </h4>
+                            <p class="mbr-timeline-text mbr-fonts-style display-7">
+                                Создана скульптура
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--4-->
+                <div class="row timeline-element  separline">
+                    <div class="timeline-date-panel col-xs-12 col-md-6 align-right">
+                        <div class="time-line-date-content">
+                            <p class="mbr-timeline-date mbr-fonts-style display-5" style="color: #0d95e8">
+                                21 Июня 2016
+                            </p>
+                        </div>
+                    </div>
+                    <span class="iconBackground"></span>
+                    <div class="col-xs-12 col-md-6 align-left ">
+                        <div class="timeline-text-content">
+                            <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">
+                                Орангутан
+                            </h4>
+                            <p class="mbr-timeline-text mbr-fonts-style display-7">
+                                Создана скульптура
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                 <!--5-->
+                <div class="row timeline-element reverse">
+                    <div class="timeline-date-panel col-xs-12 col-md-6  align-left">
+                        <div class="time-line-date-content">
+                            <p class="mbr-timeline-date mbr-fonts-style display-5" style="color: #0d95e8">
+                                27 Ноября 2016
+                            </p>
+                        </div>
+                    </div>
+                    <span class="iconBackground"></span>
+                    <div class="col-xs-12 col-md-6 align-right">
+                        <div class="timeline-text-content">
+                            <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">
+                                Лев шагающий по брусчатке
+                            </h4>
+                            <p class="mbr-timeline-text mbr-fonts-style display-7">
+                                Создана скульптура
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--6-->
+                <div class="row timeline-element  separline">
+                    <div class="timeline-date-panel col-xs-12 col-md-6 align-right">
+                        <div class="time-line-date-content">
+                            <p class="mbr-timeline-date mbr-fonts-style display-5" style="color: #0d95e8">
+                                7 Апреля 2015
+                            </p>
+                        </div>
+                    </div>
+                    <span class="iconBackground"></span>
+                    <div class="col-xs-12 col-md-6 align-left ">
+                        <div class="timeline-text-content">
+                            <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">
+                                Дракон
+                            </h4>
+                            <p class="mbr-timeline-text mbr-fonts-style display-7">
+                                Создана скульптура
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                 <!--7-->
+                <div class="row timeline-element reverse">
+                    <div class="timeline-date-panel col-xs-12 col-md-6  align-left">
+                        <div class="time-line-date-content">
+                            <p class="mbr-timeline-date mbr-fonts-style display-5" style="color: #0d95e8">
+                                17 Февраля 2014
+                            </p>
+                        </div>
+                    </div>
+                    <span class="iconBackground"></span>
+                    <div class="col-xs-12 col-md-6 align-right">
+                        <div class="timeline-text-content">
+                            <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">
+                                Медведь у старого пня
+                            </h4>
+                            <p class="mbr-timeline-text mbr-fonts-style display-7">
+                                Создана скульптура
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--8-->
+                <div class="row timeline-element  separline">
+                    <div class="timeline-date-panel col-xs-12 col-md-6 align-right">
+                        <div class="time-line-date-content">
+                            <p class="mbr-timeline-date mbr-fonts-style display-5" style="color: #0d95e8">
+                                29 Ноября 2014
+                            </p>
+                        </div>
+                    </div>
+                    <span class="iconBackground"></span>
+                    <div class="col-xs-12 col-md-6 align-left ">
+                        <div class="timeline-text-content">
+                            <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">
+                                Лев заигрывает к львице
+                            </h4>
+                            <p class="mbr-timeline-text mbr-fonts-style display-7">
+                                Создана скульптура
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--9-->
+                <div class="row timeline-element reverse">
+                    <div class="timeline-date-panel col-xs-12 col-md-6  align-left">
+                        <div class="time-line-date-content">
+                            <p class="mbr-timeline-date mbr-fonts-style display-5" style="color: #0d95e8">
+                                23 Июня 2013
+                            </p>
+                        </div>
+                    </div>
+                    <span class="iconBackground"></span>
+                    <div class="col-xs-12 col-md-6 align-right">
+                        <div class="timeline-text-content">
+                            <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">
+                                Кабан уходит от охотника
+                            </h4>
+                            <p class="mbr-timeline-text mbr-fonts-style display-7">
+                                Создана скульптура
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="clients cid-rUI0phdzxH" data-interval="false" id="clients-i">
+        <div class="container mb-5">
+            <div class="media-container-row">
+                <div class="col-12 align-center">
+                    <h2 class="mbr-section-title pb-3 mbr-fonts-style display-1">
+                        Наши партнеры</h2>
+                    <h3 class="mbr-section-subtitle mbr-light mbr-fonts-style display-2">магазин</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="carousel slide" role="listbox" data-pause="true" data-keyboard="false" data-ride="carousel" data-interval="5000">
+                <div class="carousel-inner" data-visible="1">
+                    <div class="carousel-item ">
+                        <div class="media-container-row">
+                            <div class="col-md-12">
+                                <div class="wrap-img ">
+                                    <a href="https://stvol.ua/">
+                                        <img src="{% static 'assets/images/stvol-240x77.jpg' %}" class="img-responsive clients-img" alt="" title="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="media-container-row">
+                            <div class="col-md-12">
+                                <div class="wrap-img ">
+                                    <a href="https://stvol.ua/">
+                                        <img src="{% static 'assets/images/stvol-240x77.jpg' %}" class="img-responsive clients-img" alt="" title="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <a data-app-prevent-settings="" class="carousel-control carousel-control-prev" role="button" data-slide="prev">
+                        <span aria-hidden="true" class="mbri-left mbr-iconfont"></span>
+                        <span class="sr-only">Назад</span>
+                    </a>
+                    <a data-app-prevent-settings="" class="carousel-control carousel-control-next" role="button" data-slide="next">
+                        <span aria-hidden="true" class="mbri-right mbr-iconfont"></span>
+                        <span class="sr-only">Вперед</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section contacts3 cid-rUHBFiK080" id="contacts3-9">
+        <div class="container">
+            <div class="row">
+                <!--Titles-->
+                <div class="title col-12">
+                    <h2 class="align-left mbr-fonts-style display-1">
+                        Наши Контакты
+                    </h2>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="wrapper">
+                                <span class="iconfont-wrapper">
+                                    <span class="amp-iconfont icon fa-thumbs-o-up fa socicon-periscope socicon"></span>
+                                </span>
+                                <div class="b-info b-adress">
+                                    <h5 class="align-left mbr-fonts-style display-5">
+                                        Адрес:
+                                    </h5>
+                                    <p class="mbr-text align-left mbr-fonts-style display-7">
+                                        Украина, г. Одесса
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="wrapper">
+                                <span class="iconfont-wrapper">
+                                    <span class="amp-iconfont icon fa-phone fa socicon-natgeo"></span>
+                                </span>
+                                <div class="b-info b-phone">
+                                    <h5 class="align-left mbr-fonts-style display-5">
+                                        Телефон:
+                                    </h5>
+                                    <p class="mbr-text align-left mbr-fonts-style display-7">
+                                         +38 (097) 085 06 75
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="wrapper">
+                                <span class="iconfont-wrapper">
+                                    <span class="amp-iconfont icon fa-comment-o fa socicon-mail socicon"></span>
+                                </span>
+                                <div class="b-info b-mai">
+                                    <h5 class="align-left mbr-fonts-style display-5">
+                                        E-mail:
+                                    </h5>
+                                    <p class="mbr-text align-left mbr-fonts-style display-7">
+                                        quality.figures.shop@gmail.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="wrapper">
+                                <span class="iconfont-wrapper">
+                                    <span class="amp-iconfont icon fa-th-large fa socicon-chrome"></span>
+                                </span>
+                                <div class="b-info b-mail">
+                                    <h5 class="align-left mbr-fonts-style display-5">
+                                        Наш сайт:
+                                    </h5>
+                                    <a href="/" class="mbr-text align-left mbr-fonts-style display-7">
+                                        sokyrenko.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

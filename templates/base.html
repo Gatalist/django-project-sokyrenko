@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+    {% load static %}
+
+    <html lang="ru">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149375775-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-149375775-1');
+		</script>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %} Сокуренко - ручная работа {% endblock title %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+        <meta name="keywords" content="{% block keywords %} интернет, магазин, подарки, подарок, вип, vip, начальнику, начальнице, шефу, директору, другу, брату, руководителю, элитные, эксклюзивные, аксессуары, украшения, для мужчины, для женщины, мужу, жене, заказать, доставка, купить, куплю, в Киеве, Одессе, в Украине, Киев, Одесса, Украина, Сокуренко Дмитрий, ручная работа, скульптуры, скульптура, портал для камина, медведь, орангутан, шимпанзе, лев, львица, львы, львы пара, кабан, волк, дракон {% endblock keywords %}">
+        <meta name="description" content="{% block description %} Элитные Подарки для Мужчин и Женщин. Эксклюзивные Вип-Подарки | sokyrenko.com Интернет магазин дорогих ✅ подарков для мужчин и женщин. Купить Vip подарок в sokyrenko Presents ➤➤ Качество в сочетании с элегантным дизайном и стилем в Украине!{% endblock description %}">
+
+        <link rel="stylesheet" href="{% static 'assets/preloader/css.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/slider-own/css/jquery.fancybox.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/slider-own/css/owl.carousel.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/slider-own/css/owl.theme.default.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/slider-own/css/owl.theme.green.min.css' %}">
+        <link rel="shortcut icon" href="{% static 'assets/images/logo-free-file-148x73.png' %}" type="image/x-icon">
+        <link rel="stylesheet" href="{% static 'assets/web/assets/mobirise-icons/mobirise-icons.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-grid.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-reboot.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/socicon/css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/animatecss/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/dropdown/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/theme/css/style.css' %}">
+        <link rel="preload" as="style" href="{% static 'assets/mobirise/css/mbr-additional.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/mobirise/css/mbr-additional.css' %}" type="text/css">
+    </head>
+
+    <body>
+
+        <!-- Прелоадер -->
+        <div class="preloader">
+            <div class="preloader__image"></div>
+        </div>
+
+        {% include 'include/header.html' %}
+
+            {% block content %}
+
+            {% endblock content %}
+
+        {% include 'include/footer.html' %}
+
+        <script src="{% static 'assets/preloader/index.js' %}"></script>
+
+    </body>
+</html>

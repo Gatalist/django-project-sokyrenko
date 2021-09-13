@@ -1,0 +1,54 @@
+{% extends 'sculptures/base.html' %}
+
+{% load static %}
+
+{% block title %} Порталы {% endblock title %}
+
+{%  block content %}
+
+    <section class="mbr-section article content9 cid-rUKj6z2paH" id="content9-2v">
+        <div class="container">
+            <div class="inner-container" style="width: 100%;">
+                <hr class="line" style="width: 25%;">
+                <div class="section-text align-center mbr-fonts-style display-2">Порталы</div>
+                <hr class="line" style="width: 25%;">
+            </div>
+        </div>
+    </section>
+
+    <section class="services1 cid-rW8nkLhdWM" id="services1-37">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="title pb-5 col-12"></div>
+
+                {% for sculpture in sculpture_list %}
+
+                    <div class="card col-12 col-md-6 p-3 col-lg-4">
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="{{ sculpture.image_title.url }}" alt="">
+                            </div>
+                            <div class="card-box">
+                                <h4 class="card-title mbr-fonts-style display-5">
+                                    {{ sculpture.title }}
+                                </h4>
+                                <p class="mbr-text mbr-fonts-style display-7">
+                                    Портал создан <br>
+                                    {{ sculpture.year }}
+                                </p>
+                                <div class="mbr-section-btn align-center">
+                                    <a href="{{ sculpture.get_absolute_url }}" class="btn btn-primary display-4">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

@@ -1,0 +1,464 @@
+
+{% extends 'sculptures/base.html' %}
+
+{% block keywords %} {{ sculpture.meta_keywords }} {% endblock keywords %}
+
+{% block description %} {{ sculpture.meta_description }} {% endblock description %}
+
+{% block title %} {{ sculpture.title }} {% endblock title %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+    <section class="mbr-section article content9 cid-rUKjGovGR9" id="content9-2w">
+        <div class="container">
+            <div class="inner-container" style="width: 100%;">
+                <hr class="line" style="width: 25%;">
+                <div class="section-text align-center mbr-fonts-style display-1">
+                    {{ sculpture.title }}
+                </div>
+                <hr class="line" style="width: 25%;">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services2 cid-rUJZ1h8NOj" id="services2-28">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="media-container-row">
+                    <div class="mbr-figure" style="width: 50%;">
+
+                        <div class="owl-carousel owl-theme" id="slider">
+                            {% for image in sculpture.imagesculpture_set.all %}
+                                <div class="item ">
+                                    <a href="{{ image.image.url }}" data-fancybox="">
+                                        <img src="{{ image.image.url }}">
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                    <div class="align-left aside-content">
+                        <h2 class="mbr-title pt-2 mbr-fonts-style display-2">Наличие: {{ sculpture.presence }}</h2>
+                        <div class="mbr-section-text">
+
+                            <p class="mbr-text text2 pt-4 mbr-light mbr-fonts-style display-1">
+                                <strong>
+                                    {{ sculpture.price }} {{ sculpture.valute }}
+                                </strong>
+                            </p>
+                        </div>
+                        <!--Btn-->
+                        <div class="mbr-section-btn pt-3 align-center">
+                            <a href="pay/" class="btn btn-primary display-4">
+                                <span class="socicon socicon-shopify mbr-iconfont mbr-iconfont-btn"></span>
+                                КУПИТЬ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section article content9 cid-rUIDwpcuQ4" id="content9-1k">
+        <div class="container">
+            <div class="inner-container" style="width: 100%;">
+                <hr class="line" style="width: 25%;">
+                <div class="section-text align-center mbr-fonts-style display-2">Описание</div>
+                <hr class="line" style="width: 25%;">
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section article content1 cid-rUJXxcJXJx" id="content1-27">
+        <div class="container">
+            <div class="media-container-row">
+                <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-12">
+                    <p>
+                        {{ sculpture.description|safe }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section article content9 cid-rW8p3ZPabM" id="content9-39">
+        <div class="container">
+            <div class="inner-container" style="width: 100%;">
+                <hr class="line" style="width: 25%;">
+                <div class="section-text align-center mbr-fonts-style display-2">
+                        Характеристики</div>
+                <hr class="line" style="width: 25%;">
+            </div>
+            </div>
+    </section>
+
+
+    <section class="step1 cid-rWOwYp1IQP" id="step1-3i">
+        <div class="container">
+            <div class="step-container">
+
+                <div class="card separline pb-4 ">
+                    <div class="step-element d-flex ">
+                        <div class="step-wrapper pr-3">
+                            <h3 class="step d-flex align-items-center justify-content-center">
+                                1
+                            </h3>
+                        </div>
+                        <div class="step-text-content">
+                            <h4 class="mbr-step-title pb-3 mbr-fonts-style display-5">
+                                Автор
+                            </h4>
+                            <p class="mbr-step-text mbr-fonts-style display-7">
+                                {% for author in sculpture.author.all %}
+                                    {{ author.name }}
+                                {% endfor %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card separline pb-4">
+                    <div class="step-element d-flex">
+                        <div class="step-wrapper pr-3">
+                            <h3 class="step d-flex align-items-center justify-content-center">
+                                2
+                            </h3>
+                        </div>
+                        <div class="step-text-content">
+                            <h4 class="mbr-step-title pb-3 mbr-fonts-style display-5">
+                                Модель создана
+                            </h4>
+                            <p class="mbr-step-text mbr-fonts-style display-7">
+                                {{ sculpture.year }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card separline pb-4">
+                    <div class="step-element d-flex">
+                        <div class="step-wrapper pr-3">
+                            <h3 class="step d-flex align-items-center justify-content-center">
+                                3
+                            </h3>
+                        </div>
+                        <div class="step-text-content">
+                            <h4 class="mbr-step-title pb-3 mbr-fonts-style display-5">
+                                Материал
+                            </h4>
+                            <p class="mbr-step-text mbr-fonts-style display-7">
+                                {{ sculpture.material }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card separline pb-4">
+                    <div class="step-element d-flex">
+                        <div class="step-wrapper pr-3">
+                            <h3 class="step d-flex align-items-center justify-content-center">
+                                4
+                            </h3>
+                        </div>
+                        <div class="step-text-content">
+                            <h4 class="mbr-step-title pb-3 mbr-fonts-style display-5">
+                                Габариты
+                            </h4>
+                            <p class="mbr-step-text mbr-fonts-style display-7">
+                                {{sculpture.gabarits}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card separline pb-4">
+                    <div class="step-element d-flex">
+                        <div class="step-wrapper pr-3">
+                            <h3 class="step d-flex align-items-center justify-content-center">
+                                5
+                            </h3>
+                        </div>
+                        <div class="step-text-content">
+                            <h4 class="mbr-step-title pb-3 mbr-fonts-style display-5">
+                                Срок изготовления
+                            </h4>
+                            <p class="mbr-step-text mbr-fonts-style display-7">
+                                {{sculpture.production_time}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="media-container-row">
+                        <div class="align-left aside-content">
+                            <h2 class="mbr-title pt-2 mbr-fonts-style display-2">
+                                Фото в оригинальном качестве можно скачать здесь.
+                            </h2>
+                            <div class="mbr-section-text"></div>
+                            <div class="mbr-section-btn pt-3 align-center">
+                                <a href="{{ sculpture.files.url }}" class="btn btn-black-outline display-4">
+                                    <span class="mobi-mbri mobi-mbri-download-2 socicon-buffer mbr-iconfont mbr-iconfont-btn"></span>
+                                    СКАЧАТЬ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section article content9 cid-rUJU2G0VfR" id="content9-24">
+        <div class="container">
+            <div class="inner-container" style="width: 100%;">
+                <hr class="line" style="width: 25%;">
+                <div class="section-text align-center mbr-fonts-style display-2">
+                        Упаковка товара</div>
+                <hr class="line" style="width: 25%;">
+            </div>
+            </div>
+    </section>
+
+    <section class="features2 cid-rUJTKEkFPI" id="features2-23">
+        <div class="container">
+            <div class="media-container-row">
+                <div class="card p-3 col-12 col-md-6 col-lg-4">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="{% static 'assets/images/boxes-1-676x773.jpg' %}" alt="" title="">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title pb-3 mbr-fonts-style display-7">
+
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card p-3 col-12 col-md-6 col-lg-4">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="{% static 'assets/images/boxes-2-676x773.jpg' %}" alt="" title="">
+                        </div>
+                        <div class="card-box ">
+                            <h4 class="card-title pb-3 mbr-fonts-style display-7">
+
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card p-3 col-12 col-md-6 col-lg-4">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="{% static 'assets/images/boxes-3-676x773.jpg' %}" alt="" title="">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title pb-3 mbr-fonts-style display-7">
+
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mbr-section article content9 cid-rUIDwpcuQ4" id="content9-1k">
+        <div class="container">
+            <div class="inner-container" style="width: 100%;">
+                <hr class="line" style="width: 25%;">
+                <div class="section-text align-center mbr-fonts-style display-2">Условия заказа</div>
+                <hr class="line" style="width: 25%;">
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section article content1 cid-rUJXxcJXJx" id="content1-27">
+        <div class="container">
+            <div class="media-container-row">
+                <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-12">
+                    <p>
+                        {{ sculpture.conditions|safe }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mbr-section article content9 cid-rUIDwpcuQ4" id="content9-1k">
+        <div class="container">
+            <div class="inner-container" style="width: 100%;">
+                <hr class="line" style="width: 25%;">
+                <div class="section-text align-center mbr-fonts-style display-2">Доставка</div>
+                <hr class="line" style="width: 25%;">
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section article content1 cid-rUJXxcJXJx" id="content1-27">
+        <div class="container">
+            <div class="media-container-row">
+                <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-12">
+                    <p>
+                        {{ sculpture.delivery|safe }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mbr-section form1 cid-rUIK7kRu1d" id="form1-1r">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="title col-12 col-lg-8">
+                    <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">Оставить коментарий</h2>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="media-container-column col-lg-8">
+                    <!---Formbuilder Form--->
+
+                    <form action="{% url 'add_review' sculpture.id %}" method="POST" class="mbr-form form-with-styler" id="FormReview">
+                        {% csrf_token %}
+                        <input type="hidden" name="parent" data-form-email="true" id="contactparent" value="">
+                        <div class="row">
+                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Спасибо за Ваш отзыв!</div>
+                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                            </div>
+                        </div>
+
+                        <div class="dragArea row">
+                            <div class="col-md-6  form-group">
+                                <label for="name-form1-1r" class="form-control-label mbr-fonts-style display-7">Имя</label>
+                                <input type="text" name="name" required="" class="form-control display-7" id="name-form1-1r">
+                            </div>
+
+                            <div class="col-md-6  form-group">
+                                <label for="email-form1-1r" class="form-control-label mbr-fonts-style display-7">Email</label>
+                                <input type="email" name="email" required="" class="form-control display-7" id="email-form1-1r">
+                            </div>
+
+                            <div data-for="message" class="col-md-12 form-group">
+                                <label for="message-form1-1r" class="form-control-label mbr-fonts-style display-7">Сообщение</label>
+                                <textarea name="text"class="form-control display-7" id="message-form1-1r"></textarea>
+                            </div>
+
+                            <div class="col-md-12 input-group-btn align-center">
+                                <button type="submit" class="btn btn-primary btn-form display-4">ОТПРАВИТЬ</button>
+                            </div>
+
+                        </div>
+                    </form><!---Formbuilder Form--->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials5 cid-rWw38dZaLc" id="testimonials5-3c">
+        <div class="container">
+            <div class="media-container-row">
+                <div class="title col-12 align-center">
+                    <h2 class="pb-3 mbr-fonts-style display-2">
+                        ОТЗЫВЫ НАШИХ ПОЛЬЗОВАТЕЛЕЙ
+                    </h2>
+                    <h3 class="mbr-section-subtitle mbr-light pb-3 mbr-fonts-style display-5">
+                        Всего отзывов - {{ sculpture.get_review.count }}
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="media-container-column">
+
+                {% for review in sculpture.get_review %}
+
+                    <div class="mbr-testimonial align-center col-12 col-md-10">
+                        <div class="panel-item">
+                            <div class="card-block">
+                                <div class="testimonial-photo">
+                                    <img src="{% static 'assets/images/mbr-240x316.png' %}" alt="" title="">
+                                </div>
+                                 <div class="mbr-author-name mbr-bold mbr-fonts-style mbr-white display-5">
+                                     {{review.name}}
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <p class="mbr-text mbr-fonts-style mbr-white display-7">
+                                   {{review.text}}
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <div class=" mbr-fonts-style display-8">
+                                     {{review.year}}
+                                </div>
+                            </div>
+                            <a class="btn btn-primary display-3" href="#FormReview" onclick="addReview('{{ review.name }}', '{{ review.id }}')" style="border-radius: 50px">
+                                Ответить
+                            </a>
+
+                            {% for rew in review.reviews_set.all %}
+                            <div class="panel-item" style="margin: 15% 15% 0 15%">
+                                <div class="card-block">
+                                    <div class="testimonial-photo">
+                                        <img src="{% static 'assets/images/mbr-240x316.png' %}" alt="" title="">
+                                    </div>
+                                     <div class="mbr-author-name mbr-bold mbr-fonts-style">
+                                         {{rew.name}}
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <p class="mbr-text mbr-fonts-style">
+                                       {{rew.text}}
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class=" mbr-fonts-style">
+                                         {{rew.year}}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function addReview(name, id) {
+            document.getElementById("contactparent").value = id;
+            document.getElementById("message-form1-1r").innerText = `${name}, `
+        }
+    </script>
+
+
+
+
+{% endblock content %}

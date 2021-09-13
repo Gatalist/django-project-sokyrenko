@@ -1,0 +1,70 @@
+
+{% extends 'sculptures/base.html' %}
+
+{% block keywords %} {{ sculpture.meta_keywords }} {% endblock keywords %}
+
+{% block description %} {{ sculpture.meta_description }} {% endblock description %}
+
+{% block title %} {{ development.title }} {% endblock title %}
+
+{% load static %}
+
+{% block content %}
+
+    <section class="mbr-section article content9 cid-rUKjGovGR9" id="content9-2w">
+        <div class="container">
+            <div class="inner-container" style="width: 100%;">
+                <hr class="line" style="width: 25%;">
+                <div class="section-text align-center mbr-fonts-style display-1">
+                    {{ development.title }}
+                </div>
+                <hr class="line" style="width: 25%;">
+            </div>
+        </div>
+    </section>
+
+    <section class="services2 cid-rUJZ1h8NOj" id="services2-28">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="media-container-row">
+                    <div class="mbr-figure" style="width: 65%;">
+                        <div class="owl-carousel owl-theme" id="slider">
+
+                            {% for image in development.imagedevelopment_set.all %}
+                                <div class="item ">
+                                    <a href="{{ image.image.url }}" data-fancybox="">
+                                        <img src="{{ image.image.url }}">
+                                    </a>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section article content9 cid-rUIDwpcuQ4" id="content9-1k">
+        <div class="container">
+            <div class="inner-container" style="width: 100%;">
+                <hr class="line" style="width: 25%;">
+                <div class="section-text align-center mbr-fonts-style display-2">Описание</div>
+                <hr class="line" style="width: 25%;">
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section article content1 cid-rUJXxcJXJx" id="content1-27">
+        <div class="container">
+            <div class="media-container-row">
+                <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-12">
+                    <p>
+                        {{ development.description|safe }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

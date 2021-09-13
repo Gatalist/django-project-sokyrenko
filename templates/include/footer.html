@@ -1,0 +1,110 @@
+
+{% load static %}
+
+    <section class="cid-rUJRU93j5y" id="social-buttons2-21">
+        <div class="container">
+            <div class="media-container-row">
+                <div class="col-md-8 align-center">
+                    <h2 class="pb-3 mbr-fonts-style display-2">Мы есть в соцсетях</h2>
+                    <div class="social-list pl-0 mb-0">
+                        <a href="tg://resolve?domain=sokyrenko_com">
+                            <span class="px-2 mbr-iconfont mbr-iconfont-social socicon-telegram socicon"></span>
+                        </a>
+                        <a href="viber://chat?number=+380970850675">
+                            <span class="px-2 mbr-iconfont mbr-iconfont-social socicon-viber socicon"></span>
+                        </a>
+                        <a href="https://www.instagram.com/sokyrenko_com/" target="_blank">
+                            <span class="px-2 mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer3 cid-rWOp83lP3r mbr-reveal" id="footer3-3f">
+        <div class="container">
+            <div class="media-container-row content">
+                <div class="col-md-3 col-sm-4">
+                    <p class="mb-4 mbr-fonts-style foot-title display-7">
+                        ИНФОРМАЦИЯ
+                    </p>
+                    <p class="mbr-text mbr-links-column mbr-fonts-style display-7">
+                        <a href="/confidentially/" class="text-black">Конфиденциальность</a>
+                        <br><a href="https://novaposhta.ua/ru/tracking" class="text-black">Отслеживание заказа</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <p class="mb-4 mbr-fonts-style foot-title display-7">
+                        КОНТАКТЫ
+                    </p>
+                    <p class="mbr-text mbr-fonts-style mbr-links-column display-7">
+                        <p>Адрес: Украина, г. Одесса</p>
+                        <p>Тел: +38(097)085-06-75</p>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-lower">
+                <div class="media-container-row">
+                    <div class="col-sm-12">
+                        <hr>
+                    </div>
+                </div>
+                <div class="media-container-row">
+                    <div class="col-sm-6 copyright">
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            © Copyright 2020 - Все права защищены
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'assets/slider-own/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/slider-own/js/owl.carousel.js' %}"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#slider").owlCarousel({
+                arrows: true,
+                items: 1,
+                autoHeight: true,
+                center: true,
+                nav: true,
+                loop: true, //Зацикливаем слайдер
+                margin: 10, //Отступ от картино если выводите больше 1
+                smartSpeed: 1000, //Время движения слайда
+                navText: [
+                    '<svg width="40" height="40" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>',
+                    '<svg width="40" height="40" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>'
+                ]
+
+            });
+        });
+
+    </script>
+
+    <script src="{% static 'assets/slider-own/js/jquery.fancybox.js' %}"></script>
+    <script src="{% static 'assets/popper/popper.min.js' %}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/smoothscroll/smooth-scroll.js' %}"></script>
+    <script src="{% static 'assets/parallax/jarallax.min.js' %}"></script>
+    <script src="{% static 'assets/sociallikes/social-likes.js' %}"></script>
+    <script src="{% static 'assets/dropdown/js/nav-dropdown.js' %}"></script>
+    <script src="{% static 'assets/dropdown/js/navbar-dropdown.js' %}"></script>
+    <script src="{% static 'assets/touchswipe/jquery.touch-swipe.min.js' %}"></script>
+    <script src="{% static 'assets/theme/js/script.js' %}"></script>
+
+    <input name="animation" type="hidden">
+    <div id="scrollToTop" class="scrollToTop mbr-arrow-up">
+        <a style="text-align: center;">
+            <i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i>
+        </a>
+    </div>
+
+    </body>
+</html>
